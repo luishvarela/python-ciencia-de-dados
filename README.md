@@ -22,16 +22,24 @@ Como aplicação prática desses estudos, o repositório demonstra um pipeline r
 2. **Seleção de Algoritmo** robusta através de Validação Cruzada (*5-Fold Cross-Validation*) comparando **SVC**, **Random Forest** e **KNN**.
 3. **Diagnóstico Final** com divisão determinística (`random_state=42`), avaliação via relatório de classificação e análise geométrica de erros com matriz de confusão.
 
+### 📊 Resultados Visuais
+
+#### Distribuição e Correlação das Espécies (Pairplot)
+![Pairplot do Dataset Iris](Imagens/pairplot_iris.png)
+
+#### Avaliação do Modelo Campeão (Matriz de Confusão - KNN)
+![Matriz de Confusão do KNN](Imagens/matriz_confusao.png)
+
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 * **Linguagem:** Python 3
 * **Bibliotecas:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn
 
 ---
 
-## 👤 Autor
+## Autor
 
 Desenvolvido por **Luís Henrique Varela Medeiros Bezerra** 
 * Aluno de Bacharelado em Ciência de Computação (BCC) — **ICMC/USP**
