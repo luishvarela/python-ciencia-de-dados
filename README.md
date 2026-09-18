@@ -27,6 +27,29 @@ Estudo focado na identificação de ataques de falsificação de sinal GNSS (*sp
 * **Validação Cruzada Consciente de Séries Temporais:** Substituição do *shuffle* aleatório por validação baseada em blocos de janelas contínuas para evitar o vazamento de dados (*data leakage*) decorrente da autocorrelação temporal.
 * **Pós-Processamento Temporal:** Aplicação de redução do limiar de decisão de probabilidade (ajustado para 18%) combinada a um filtro de votação majoritária (*majority voting*), elevando a taxa de detecção (*Recall*) do ataque de **52% para 84%**.
 
+**Comparativo do desempenho entre os modelos**
+
+| Modelo | Acurácia | F1-Score (Classe 1) | Recall (Classe 1) | Precision (Classe 1) | Macro F1-Score |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Random Forest (Refinado)** | 0.95 | 0.54 | 0.52 | 0.57 | 0.82 |
+| **XGBoost Otimizado** | **0.96** | 0.58 | 0.48 | **0.74** | 0.82 |
+| **RF + Pós-Processamento** | 0.95 | **0.65** | **0.84** | 0.53 | **0.85** |
+
+**F1-Score Detalhado por Classe**
+
+| Modelo | Classe 0 | Classe 1 | Classe 2 | Classe 3 |
+| :--- | :---: | :---: | :---: | :---: |
+| **Random Forest (Refinado)** | 0.98 | 0.54 | 0.80 | **0.96** |
+| **XGBoost Otimizado** | 0.98 | 0.58 | **0.84** | 0.90 |
+| **RF + Pós-Processamento** | 0.98 | **0.65** | 0.80 | **0.96** |
+
+#### Resultados Visuais (Spoofing)
+
+##### Distribuição e Correlação das Features (Heatmap)
+![Heatmap do dataset de Spoofing](Imagens/heatmap_correlation.png)
+
+##### Avaliação do Modelo Campeão (Matriz de Confusão Random Forest Otimizado + Pós-Processamento)
+![Matriz de Confusão RF + Pós-Processamento](Imagens/matrizConfusaoFinal.png)
 ---
 
 ### 2. Pipeline Clássico de Classificação (Dataset Iris)
