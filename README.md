@@ -21,7 +21,7 @@ O projeto está organizado de forma modular, cobrindo desde a fundamentação em
 
 ### 1. Detecção de Spoofing GNSS em UAS (Projeto de Aplicação)
 
-Estudo focado na identificação de ataques de falsificação de sinal GNSS (*spoofing*) em drones a partir de dados temporais multicanais de receptores a bordo.
+Estudo focado na identificação de ataques de falsificação de sinal GNSS (*spoofing*) em drones a partir de dados temporais multicanais de receptores a bordo. O dataset contém vários dados coletados de drones reais contendo quatro classes: sinal autêntico, spoofing simplista, spoofing intermediário e spoofing sofisticado. A ideia principal era treinar e descobrir qual o modelo mais adequado para a identificação e classificação precisa entre os 4.
 
 * **Engenharia de Features de Domínio Físico:** Construção da métrica $\vert{}Doppler - TCD\vert{}$ para mensurar incoerências físicas entre a fase da portadora e o deslocamento Doppler nos 8 canais de satélite visíveis.
 * **Validação Cruzada Consciente de Séries Temporais:** Substituição do *shuffle* aleatório por validação baseada em blocos de janelas contínuas para evitar o vazamento de dados (*data leakage*) decorrente da autocorrelação temporal.
